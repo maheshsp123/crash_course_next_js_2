@@ -11,10 +11,11 @@ const ArticleList = ({articles})=>{
         <div>
             <h2>Article List</h2>
             {
-                articles.map((article)=>(
+                articles.map((article)=>{
                         // console.log "hi ar li";
-                        <ArticleItem id={article.id} content={article.content} description={article.description}/>
-                ))
+                        return(<ArticleItem id={article.id} content={article.content} description={article.description}/>
+                        )
+                })
             }
         </div>
     )
