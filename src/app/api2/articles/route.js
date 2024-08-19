@@ -1,9 +1,21 @@
+import { NextResponse } from 'next/server';
 import { articles } from '@/data'
 
-export default function handler(req,res){
+// Handle GET requests
+export async function GET(request) {
+    // const products = [
+    //   { id: 1, name: 'Product A', price: 50 },
+    //   { id: 2, name: 'Product B', price: 75 },
+    // ];
+
     const total_data_count = articles.length
     // Extract the query parameters
-    const { page_no = 0, page_size = 5 } = req.query;
+    // Get the full URL
+    const { searchParams } = new URL(request.url);
+
+    // Retrieve specific query parameters
+    const page_no = searchParams.get('page_no');
+    const page_size = searchParams.get('page_size');
 
     // Parse the parameters as integers
     const pageNo = parseInt(page_no, 10);
@@ -20,5 +32,6 @@ export default function handler(req,res){
         page_size:pageSize,
         data:paginatedData
     }
-    res.status(200).json(resp_data)
-}
+    
+    return NextResponse.json(resp_data);
+  }
