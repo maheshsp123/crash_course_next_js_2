@@ -11,6 +11,7 @@ async function fetchData(article_id){
 }
 
 const ArticleItemPage = async ({params})=>{
+    console.log("Article Item page")
     const {article_id} = params
     // console.log("apiEndpoint =", `${config.apiEndPoint}/api/articles/${article_id}`)
     // const resp = await fetch(`${config.apiEndPoint}/api/articles/${article_id}`)

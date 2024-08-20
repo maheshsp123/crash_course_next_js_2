@@ -8,8 +8,8 @@ const ArticleList = ({articles})=>{
         
     // })
     return (
-        <div>
-            <h2>Article List</h2>
+        <div class="centered-box">
+            <center><h2>Article List</h2></center>
             {
                 articles.map((article)=>{
                         // console.log "hi ar li";

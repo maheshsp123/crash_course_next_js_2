@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -30,4 +30,76 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+} */
+
+body {
+  background-color: #444441; /* Background color */
+  color: #ffe100;            /* Foreground text color */
+  font-family: Arial, sans-serif; /* Example of other properties */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #30302e; /* Background color */
+  color: #f8e704;            /* Foreground text color */
+  font-family: Arial, sans-serif; /* Example of other properties */
+  margin: 4px;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.link_class{
+  background-color: #444441; /* Background color */
+  color: #ffffff;            /* Foreground text color */
+  font-family: Arial, sans-serif; /* Example of other properties */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none; /* Removes the underline */
+}
+.link_class:hover, .link_class:focus {
+  background-color: #50504c; /* Background color */
+}
+
+.common_class{
+  background-color: #444441; /* Background color */
+  color: #ffe100;            /* Foreground text color */
+  font-family: Arial, sans-serif; /* Example of other properties */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.rounded-border-box {
+  width: 100%;           /* Fit to parent width */
+  height: 10%;
+  border: 2px solid white; /* White border with thickness */
+  border-radius: 10px;   /* Rounded corners, adjust the value as needed */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's width and height */
+  margin: 10px;
+  padding: 10px;
+  background-color: inherit;
+}
+
+.centered-box {
+  height: 80%;           /* Height is 50% of the parent */
+  width: 90%;            /* Width is 60% of the parent */
+  margin: 10px;          /* 10px margin around the element */
+  padding: 10px;
+  /* Center the element */
+  
+  left: 50%;             /* Move 50% right of the container */
+  
+  
+  box-sizing: border-box; /* Include padding and border in element's width/height */
+}
+
+.full-size-box {
+  width: calc(100% - 20px);   /* 100% width minus left and right margin */
+  height: calc(80% - 20px);  /* 100% height minus top and bottom margin */
+  margin: 10px;               /* 10px margin on all sides */
+  box-sizing: border-box;     /* Include padding and border in the element's width and height */
 }

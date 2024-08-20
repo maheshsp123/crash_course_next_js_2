@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react'
 
 
 export default function Home() {
+  console.log("Home page")
   // Initialize useState with default values for page_no and page_size
   const [pageNo, setPageNo] = useState(0);  // Default page number is 0
   const [pageSize, setPageSize] = useState(5);  // Default page size is 5
@@ -31,13 +32,16 @@ export default function Home() {
   }, [pageNo, pageSize]);  // Trigger effect when pageNo or pageSize changes
 
   return (
-      <div>
-        <h2>Welcome to crash course 2</h2>
+      <div class="full-size-box">
+        <center><h2>Welcome to crash course 2</h2></center>
         <ArticleList articles={articles} />
         <p/>
-        Showing Page no:{pageNo}
-        <button onClick={() => {setPageNo(pageNo-1)}}>[ Previous]</button>
-        <button onClick={() => {setPageNo(pageNo+1)}}>[ Next]</button>
+        
+        <center >
+          <button onClick={() => {setPageNo(pageNo-1)}}>  {"<<"}Previous </button>
+          Showing Page no: {pageNo}
+          <button onClick={() => {setPageNo(pageNo+1)}}> Next{">>"}</button>
+        </center>
       </div>
   );
 }
