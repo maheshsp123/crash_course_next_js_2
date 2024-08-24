@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
+- This project has been updated to utilize the Next.js App Router.
+- It serves as a basic crash course for getting started with Next.js, assuming prior experience with React.js.
+- Additionally, the author has implemented state management using React Context to handle transitions between client-side rendered (CSR) and server-side rendered (SSR) pages.
 ## Getting Started
 
 First, run the development server:
